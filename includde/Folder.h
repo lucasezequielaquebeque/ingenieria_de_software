@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include<vector>
+#include "../includde/IFileSystemComponent.h"
 
 class Folder : public IFileSystemComponent
 {
@@ -12,7 +13,7 @@ class Folder : public IFileSystemComponent
 
     public:
         Folder(std::string nodeName);
-        virtual ~Folder(){};
+        virtual ~Folder();
         void list(int depth);
         void add(IFileSystemComponent* component);
         void remove(IFileSystemComponent* component);

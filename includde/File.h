@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "../includde/IFileSystemComponent.h"
 
 class File : public IFileSystemComponent
 {
@@ -12,7 +13,7 @@ class File : public IFileSystemComponent
 
     public:
         File(std::string nodeName);
-        virtual ~File(){}
+        virtual ~File();
         void list(int depth);
 
         void add(IFileSystemComponent* component);
